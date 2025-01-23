@@ -77,7 +77,7 @@
     <script type="text/javascript">
         "use strict";
 
-        $(function(){
+        $(document).ready(function(){
             var getTextNodesIn = function(el) {
                 return $(el).find(":not(iframe,script)").addBack().contents().filter(function() {
                     return this.nodeType == 3;
