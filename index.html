@@ -23,6 +23,7 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            visibility: visible;  /* Ensure header is always visible */
         }
         p {
             font-size: 1.25rem;
@@ -35,7 +36,7 @@
     </style>
 </head>
 <body>
-    <h1>LOS TRES CERDITOS</h1>
+    <h1>LOS TRES CERDITOS</h1> <!-- Header is static -->
     <div id="story">
         <p>Al lado de sus padres, tres cerditos habían crecido alegres en una cabaña del bosque. Y como ya eran mayores, sus papás decidieron que era hora de que construyeran, cada uno, su propia casa. Los tres cerditos se despidieron de sus papas, y fueron a ver cómo era el mundo, y encontraron un bonito lugar cerca del bosque donde construir sus tres casitas.</p>
 
@@ -109,7 +110,7 @@
             }, 1000);  // Delay in milliseconds, adjust as needed
 
             // Continue scrambling every 500ms
-            setInterval(messUpWords, 1500);
+            setInterval(messUpWords, 500);
         });
     </script>
 </body>
