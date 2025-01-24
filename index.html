@@ -26,17 +26,12 @@
             max-width: 800px;
         }
         #story {
-            visibility: hidden; /* Hide the story content initially */
+            visibility: visible; /* Ensure text is always visible */
         }
     </style>
 </head>
 <body>
     <div id="story">
-
-
-
-
-        
         <p style="font-size: 2.5rem; font-weight: bold; margin-bottom: 30px;">LOS TRES CERDITOS</p> <!-- Title as part of the text -->
         <p>Al lado de sus padres, tres cerditos habían crecido alegres en una cabaña del bosque. Y como ya eran mayores, sus papás decidieron que era hora de que construyeran, cada uno, su propia casa. Los tres cerditos se despidieron de sus papas, y fueron a ver cómo era el mundo, y encontraron un bonito lugar cerca del bosque donde construir sus tres casitas.</p>
 
@@ -101,13 +96,8 @@
                 });
             }
 
-            // Perform scrambling once before showing the story
+            // Perform scrambling immediately on the text content
             messUpWords();
-            
-            // Delay the visibility of the story (after it scrambles)
-            setTimeout(function() {
-                $("#story").css("visibility", "visible");
-            }, 1000);  // Delay in milliseconds, adjust as needed
 
             // Continue scrambling every 500ms
             setInterval(messUpWords, 500);
