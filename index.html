@@ -23,7 +23,6 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
-            visibility: visible; /* Ensure header is always visible */
         }
         p {
             font-size: 1.25rem;
@@ -31,7 +30,7 @@
             max-width: 800px;
         }
         #story {
-            visibility: hidden; /* Hide only the story content initially */
+            visibility: hidden; /* Hide the story content initially */
         }
     </style>
 </head>
@@ -103,10 +102,14 @@
 
             // Perform scrambling once before showing the story
             messUpWords();
-            $("#story").css("visibility", "visible");
+            
+            // Delay the visibility of the story (after it scrambles)
+            setTimeout(function() {
+                $("#story").css("visibility", "visible");
+            }, 1000);  // Delay in milliseconds, adjust as needed
 
-            // Then continue scrambling every 500ms
-            setInterval(messUpWords, 500);
+            // Continue scrambling every 500ms
+            setInterval(messUpWords, 1500);
         });
     </script>
 </body>
