@@ -23,11 +23,15 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 20px;
+            visibility: visible; /* Ensure header is always visible */
         }
         p {
             font-size: 1.25rem;
             margin-bottom: 15px;
             max-width: 800px;
+        }
+        #story {
+            visibility: hidden; /* Hide only the story content initially */
         }
     </style>
 </head>
@@ -97,7 +101,12 @@
                 });
             }
 
-            setInterval(messUpWords, 2000);
+            // Perform scrambling once before showing the story
+            messUpWords();
+            $("#story").css("visibility", "visible");
+
+            // Then continue scrambling every 500ms
+            setInterval(messUpWords, 500);
         });
     </script>
 </body>
